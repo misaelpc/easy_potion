@@ -13,7 +13,7 @@ defmodule EasyPotion.Http do
   end
 
   def request(method, url) do
-    :wpool.call(:http_workers, {:request, method, url}, :available_worker)
+    :wpool.call(:http_workers, {:request, method, url}, :available_worker, :infinity)
   end
 
   def handle_call({:request, method, url}, _from, state) do
