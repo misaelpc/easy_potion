@@ -7,7 +7,7 @@ defmodule EasyPotion.Application do
 		:ssl.start
     opts = [{:overrun_warning, :infinity},
         {:overrun_handler, {:error_logger, :warning_report}},
-        {:workers, 50},
+        {:workers, 100},
         {:worker_opt, []},
         {:worker, {EasyPotion.Http, []}}]
 
