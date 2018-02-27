@@ -17,7 +17,7 @@ defmodule EasyPotion.Http do
   end
 
   def handle_call({:request, method, url}, _from, state) do
-    result = :httpc.request(method, {to_charlist(url), []}, [{:timeout, :timer.seconds(2)}], [])
+    result = :httpc.request(method, {to_charlist(url), []}, [{:timeout, :timer.seconds(4)}], [])
     {:reply, result, state}
   end
 
