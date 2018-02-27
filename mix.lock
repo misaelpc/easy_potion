@@ -1,0 +1,3 @@
+%{
+  "worker_pool": {:git, "https://github.com/inaka/worker_pool", "5870947a844bb1f18611d18701c964d3fb346d67", [tag: "2.3.0"]},
+}
